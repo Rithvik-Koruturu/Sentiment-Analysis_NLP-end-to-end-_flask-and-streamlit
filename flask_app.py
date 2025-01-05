@@ -5,10 +5,10 @@ import numpy as np
 app = Flask(__name__)
 
 # Load models and preprocessor
-cv = pickle.load(open('Models/countVectorizer.pkl', 'rb'))
-scaler = pickle.load(open('Models/scaler.pkl', 'rb'))
-rf_model = pickle.load(open('Models/random_forest_model.pkl', 'rb'))  # Random Forest Model
-xgb_model = pickle.load(open('Models/xgb_model.pkl', 'rb'))          # XGBoost Model
+cv = pickle.load(open('coutVectorizer.pkl', 'rb'))
+scaler = pickle.load(open('scaler.pkl', 'rb'))
+rf_model = pickle.load(open('random_forest_model.pkl', 'rb'))  # Random Forest Model
+xgb_model = pickle.load(open('xgb_model.pkl', 'rb'))          # XGBoost Model
 
 @app.route('/predict', methods=['POST'])
 def predict():
